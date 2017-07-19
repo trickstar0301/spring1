@@ -10,6 +10,7 @@ package com.example.spring.config;
         import org.springframework.context.annotation.Bean;
         import org.springframework.context.annotation.ComponentScan;
         import org.springframework.context.annotation.Configuration;
+        import org.springframework.scheduling.annotation.EnableAsync;
         import org.springframework.web.servlet.config.annotation.EnableWebMvc;
         import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
         import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -20,6 +21,7 @@ package com.example.spring.config;
         import springfox.documentation.spring.web.plugins.Docket;
         import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+@EnableAsync
 @Configuration
 @EnableWebMvc
 @EnableSwagger2 // swagger(v2)を有効にする

@@ -5,14 +5,19 @@ package com.example.spring.dao;
  */
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
+import com.example.spring.controller.CustomerRestController;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.example.spring.model.Customer;
+import org.springframework.stereotype.Repository;
 
-@Component
+
+@Repository
 public class CustomerDAO {
-
+    final Logger logger = Logger.getLogger(String.valueOf(CustomerDAO.class));
     // Dummy database. Initialize with some dummy values.
     private static List customers;
     {
@@ -39,8 +44,8 @@ public class CustomerDAO {
      *            customer id
      * @return customer object for given id
      */
-    public Customer get(Long id) {
-
+    public Customer get(Long id) throws InterruptedException {
+        logger.info("dao get start");
         for (Object c1 : customers) {
             Customer c = (Customer)c1;
             if (c.getId().equals(id)) {
@@ -58,9 +63,13 @@ public class CustomerDAO {
      *            Customer object
      * @return customer object with updated id
      */
-    public Customer create(Customer customer) {
+
+    public Customer create(Customer customer) throws InterruptedException {
+        logger.info("create start");
+        Thread.sleep(1000);
         customer.setId(System.currentTimeMillis());
         customers.add(customer);
+        logger.info("create end");
         return customer;
     }
 
