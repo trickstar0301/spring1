@@ -17,12 +17,10 @@
 *.ipr
 
 ### NetBeans ###
-nbproject/private/
-build/
 nbbuild/
 dist/
 nbdist/
 .nb-gradle/
 src/main/resources/static/
 src/main/resources/templates/
-src/test/
+
