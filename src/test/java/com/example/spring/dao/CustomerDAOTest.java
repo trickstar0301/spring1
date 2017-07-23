@@ -13,10 +13,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.util.Assert;
 
-@SpringBootTest(classes = Application.class)
-@WebAppConfiguration
-@AutoConfigureMockMvc
-@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringBootTest(classes = Application.class)
+//@WebAppConfiguration
+//@AutoConfigureMockMvc
+//@RunWith(SpringJUnit4ClassRunner.class)
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class CustomerDAOTest {
     @Autowired
     private CustomerDAO customerDAO;
