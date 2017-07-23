@@ -31,5 +31,6 @@ public class CustomerDAOTest {
     @Test
     public void getCustomerTest() throws Exception {
         Assert.isInstanceOf(Customer.class, customerDAO.get((long) 101));
+
     }
 }
