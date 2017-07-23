@@ -13,9 +13,12 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'findbugs'
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+
+[findbugsMain, findbugsTest]*.ignoreFailures = true
 
 repositories {
     mavenCentral()
@@ -36,4 +39,5 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     compileOnly 'org.projectlombok:lombok:1.16.10'
+    findbugs 'com.google.code.findbugs:findbugs:3.0.1'
 }
