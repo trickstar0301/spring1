@@ -1,27 +1,22 @@
 package com.example.spring.config;
 
-/**
- * Created by tomidaat on 2017/06/26.
- */
-
-        import com.example.spring.controller.CustomerRestController;
-        import com.google.common.base.Predicate;
-        import com.google.common.base.Predicates;
-        import org.springframework.context.annotation.Bean;
-        import org.springframework.context.annotation.ComponentScan;
-        import org.springframework.context.annotation.Configuration;
-        import org.springframework.scheduling.annotation.EnableAsync;
-        import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-        import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-        import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-        import springfox.documentation.builders.PathSelectors;
-        import springfox.documentation.builders.RequestHandlerSelectors;
-        import springfox.documentation.service.ApiInfo;
-        import springfox.documentation.spi.DocumentationType;
-        import springfox.documentation.spring.web.plugins.Docket;
-        import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import com.example.spring.controller.CustomerRestController;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableAsync
+@EnableAutoConfiguration
 @Configuration
 @EnableWebMvc
 @EnableSwagger2 // swagger(v2)を有効にする

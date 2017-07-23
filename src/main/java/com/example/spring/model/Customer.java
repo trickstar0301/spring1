@@ -1,8 +1,5 @@
 package com.example.spring.model;
 
-/**
- * Created by tomidaat on 2017/06/26.
- */
 import java.util.Date;
 
 public class Customer {
