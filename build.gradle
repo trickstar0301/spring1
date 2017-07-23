@@ -27,9 +27,6 @@ repositories {
 test {
     useJUnit {}
 }
-//test {
-//    java.srcDirs = ['src/test/java']
-//}
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
