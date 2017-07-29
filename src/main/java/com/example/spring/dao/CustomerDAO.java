@@ -16,7 +16,7 @@ public class CustomerDAO {
     private static List customers;
 
     static {
-        customers = new ArrayList();
+        customers = new ArrayList<Customer>();
         customers.add(new Customer((long) 101, "John", "Doe", "djohn@gmail.com", "121-232-3435"));
         customers.add(new Customer((long) 201, "Russ", "Smith", "sruss@gmail.com", "343-545-2345"));
         customers.add(new Customer((long) 301, "Kate", "Williams", "kwilliams@gmail.com", "876-237-2987"));
@@ -94,6 +94,7 @@ public class CustomerDAO {
      * @param customer customer
      * @return customer object with id
      */
+
     public Customer update(Long id, Customer customer) {
 
         for (Object c1 : customers) {
